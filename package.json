@@ -1,24 +1,11 @@
 {
-  "name": "with-typescript",
-  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "@material-ui/core": "4.10.1",
-    "@material-ui/icons": "4.9.1",
-    "next": "latest",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "@types/node": "^14.0.13",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "typescript": "3.9.5"
-  },
-  "license": "ISC"
+    "dev": "yarn --cwd packages/web-app dev",
+    "build": "yarn --cwd packages/web-app build",
+    "start": "yarn --cwd packages/web-app start"
+  }
 }
